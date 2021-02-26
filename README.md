@@ -9,24 +9,27 @@
 <p align="center">
     <img src="https://cdn.iconscout.com/icon/free/png-512/typescript-1174965.png" alt="Logo" width="80" height="80">
 
-  <h3 align="center">Typescipt Branch</h3>
+  <h3 align="center">Test Branch</h3>
 
   <p align="center">
-    An awesome README template to jumpstart your projects!
+    Testing simple api
   </p>
 </p>
-
 
 <!-- ABOUT THE PROJECT -->
 
 ## About The Project
 
+This project show you somethings, which are:
+
+- Testing with `JEST LIB`
+- Using `Pg` Database
 
 ### Installation
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/your_username_/Project-Name.git
+   git clone https://github.com/bachtuyetx7chulun/Testing.git
    ```
 2. Install NPM packages
    ```sh
@@ -35,7 +38,7 @@
 3. Run file with `Script`
    ```sh
    yarn start
-   ``` 
+   ```
 
 <!-- CONTRIBUTING -->
 

@@ -1,5 +1,10 @@
-import sum from '../controllers/sum.controller'
+import { users, getUsers } from './../controllers/user.controller'
 
-test('Check sum', () => {
-  expect(sum(1, 1)).toBe(2)
+// * User Testing
+describe('User Test', () => {
+  // TODO: Test getUsers Case
+  it('Check user', () => {
+    expect(users.length).toEqual(0)
+  })
+
 })
