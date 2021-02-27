@@ -1,5 +1,6 @@
 import { Request, Response, NextFunction } from 'express'
-export let users: Array<string> = []
+import { User } from '../interface/user.interface'
+
 const getUsers = (
   req: Request,
   res: Response,
@@ -7,7 +8,7 @@ const getUsers = (
 ): Response => {
   return res.status(200).json({
     code: 200,
-    data: users,
+    data: '',
   })
 }
 
