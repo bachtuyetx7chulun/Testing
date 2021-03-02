@@ -1,4 +1,5 @@
 import { Request, Response, NextFunction, Router } from 'express'
+import { getUsers } from '../controllers/user.controller'
 
 const router = Router()
 router.get(
@@ -10,5 +11,7 @@ router.get(
     })
   }
 )
+
+router.get('/user', getUsers)
 
 export default router

@@ -1,10 +1,8 @@
-export interface User {
-  id: number
-  userCode: string
+export interface IUser {
+  id: string
   userName: string
   age: number
   phone: string
   email: string
-  createAt: Date
-  updateAt: Date
+  address: string
 }

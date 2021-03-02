@@ -5,6 +5,7 @@ import { json, urlencoded } from 'body-parser'
 import { PORT } from './configs'
 import apiRouter from './routers'
 import { getError, handleError } from './middleware/error.middlware'
+import { sequelize } from './database/connect'
 
 export class App {
   private app: Express
@@ -24,9 +25,21 @@ export class App {
   }
 
   public listen(): void {
-    this.app.listen(this.app.get('port'), (): void => {
-      console.log(`Server is running on port ${this.app.get('port')}`)
-      console.log(endPoints(this.app))
-    })
+    this.app.listen(
+      this.app.get('port'),
+      async (): Promise<void> => {
+        console.log(`Server is running on port ${this.app.get('port')}`)
+        console.log(endPoints(this.app))
+        try {
+          await sequelize.authenticate()
+          sequelize.sync({
+            force: true,
+          })
+          console.log('Connection has been established successfully.')
+        } catch (error) {
+          console.error('Unable to connect to the database:', error)
+        }
+      }
+    )
   }
 }
