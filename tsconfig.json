@@ -1,29 +1,19 @@
 {
   "compilerOptions": {
-      "module": "commonjs",
-      "esModuleInterop": true,
-      "target": "es6",
-      "noImplicitAny": true,
-      "moduleResolution": "node",
-      "sourceMap": true,
-      "outDir": "dist",
-      "baseUrl": ".",
-      "allowSyntheticDefaultImports": true,
-      "paths": {
-          "*": [
-              "node_modules/*"
-          ]
-      },
-      "types": [
-          "jest",
-          "node"
-      ]
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es6",
+    "noImplicitAny": true,
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "outDir": "dist",
+    "baseUrl": ".",
+    "allowSyntheticDefaultImports": true,
+    "paths": {
+      "*": ["node_modules/*"]
+    },
+    "types": ["jest", "node", "mocha"]
   },
-  "include": [
-      "src/**/*.ts",
-  ],
-  "exclude": [
-      "node_modules",
-      "src/**/*.spec.ts"
-  ]
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules"]
 }
